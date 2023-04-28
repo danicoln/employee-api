@@ -1,15 +1,15 @@
-package domain.model;
+package tech.getarrays.employeemanager.domain.model;
 
 import jakarta.persistence.*;
 
 import java.io.Serializable;
 
 @Entity
+@Table(name = "funcionarios")
 public class Funcionario implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false, updatable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
